@@ -21,7 +21,19 @@ harvest(url, payload)
   .catch(error => console.log(error))
 ```
 
-### Installation
+### Requirement
+
+Harvest uses PhantomJS behind the scenes, because of this you need to install it
+globally.
+
+```shell
+$ npm install -g phantomjs 
+```
+
+### Getting started
+
+Just install as a dependency to your project.
+
 ```shell
 $ npm install @diogoazevedos/harvest --save
 ```
