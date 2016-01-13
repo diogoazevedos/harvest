@@ -7,8 +7,11 @@
 ```javascript
 import harvest from '@diogoazevedos/harvest'
 
-const url = 'https://github.com/diogoazevedos'
-const payload = {
+const meta = {
+  link: 'https://github.com/diogoazevedos'
+}
+
+const blueprint = {
   name: '.vcard-fullname',
   repos: [{
     $root: '.popular-repos .source',
@@ -16,7 +19,7 @@ const payload = {
   }]
 }
 
-harvest(url, payload)
+harvest(meta, blueprint)
   .then(response => console.log(response))
   .catch(error => console.log(error))
 ```
@@ -27,8 +30,10 @@ Harvest uses PhantomJS behind the scenes, because of this you need to install it
 globally.
 
 ```shell
-$ npm install -g phantomjs 
+$ npm install -g phantomjs # Only for tests, don't use in production
 ```
+
+> **Note:** See [builds](https://bitbucket.org/ariya/phantomjs/downloads) to your OS. Support only version v1.9.*.
 
 ### Getting started
 
