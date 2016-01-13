@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import harvest from '../lib/harvest'
 
 const meta = {
-  url: 'https://github.com/diogoazevedos'
+  link: 'https://github.com/diogoazevedos'
 }
 
 describe('Harvest()', () => {
@@ -47,8 +47,8 @@ describe('Harvest()', () => {
   it('should work with simple ajax selection', function(done) {
     this.timeout(60000)
     harvest({
-      url: 'https://github.com/diogoazevedos/harvest',
-      ajax: true
+      link: 'https://github.com/diogoazevedos/harvest',
+      dynamic: true
     }, {
       contributors: '.numbers-summary li:nth-last-child(1) .num'
     }).then(response => {
