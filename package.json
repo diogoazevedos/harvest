@@ -1,6 +1,6 @@
 {
   "name": "@diogoazevedos/harvest",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "description": "Powerfull web scraper service, based on x-ray.",
   "main": "dist/harvest.js",
   "scripts": {
@@ -45,11 +45,5 @@
     "lib",
     "test",
     "LICENSE"
-  ],
-  "babel": {
-    "nonStandard": false,
-    "optional": [
-      "runtime"
-    ]
-  }
+  ]
 }
